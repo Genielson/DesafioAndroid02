@@ -3,7 +3,10 @@ package com.example.desafioandroid02
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_cadastrar_user.*
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_cadastrar.*
 
 class CadastrarUserActivity : AppCompatActivity() {
 
@@ -17,7 +20,9 @@ class CadastrarUserActivity : AppCompatActivity() {
 
         buttonRegisterUser.setOnClickListener {
 
+            if(validaCamposCadastro()){
 
+            }
 
         }
 
@@ -27,19 +32,32 @@ class CadastrarUserActivity : AppCompatActivity() {
 
         var camposForamValidados = true
 
-        if(textFieldEmailContent.text!!.trim()!!.isBlank()){
+        when {
+            textFieldNameContent.text!!.trim()!!.isBlank() -> {
+                textFieldNameContent.error = getString(R.string.empty_name)
+                camposForamValidados = false
+            }
 
-            textFieldEmailContent.error = getString(R.string.empty_email)
+            textFieldEmailSignupContent.text!!.trim()!!.isBlank() -> {
+                textFieldEmailSignupContent.error = getString(R.string.empty_name)
+                camposForamValidados = false
+            }
 
-            camposForamValidados = false
+            textFieldPasswordSignupContent.text!!.trim()!!.isBlank() -> {
+                textFieldPasswordSignupContent.error = getString(R.string.empty_name)
+                camposForamValidados = false
+            }
 
-        }
+            textFieldPasswordRepeatSignupContent.text!!.trim()!!.isBlank() -> {
+                textFieldPasswordRepeatSignupContent.error = getString(R.string.empty_name)
+                camposForamValidados = false
 
-        if(textFieldPasswordContent.text!!.trim().isBlank()){
+            }
 
-            textFieldPasswordContent.error = getString(R.string.empty_password)
-
-            camposForamValidados = false
+            textFieldEmailSignupContent.text != textFieldPasswordRepeatSignupContent.text -> {
+                Toast.makeText(this,"As senhas não são iguais",Toast.LENGTH_SHORT).show()
+                camposForamValidados = false
+            }
 
         }
 

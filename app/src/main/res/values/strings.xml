@@ -9,5 +9,7 @@
     <string name="empty_email"> Por favor, preencha o campo Email </string>
     <string name="empty_password"> Por favor, preencha o campo Password </string>
     <string name="name">Name</string>
+    <string name="empty_name"> Por favor, preencha o campo Nome </string>
+    <string name="equals_password"> As senhas não são iguais </string>
     <string name="or">Or</string>
 </resources>
