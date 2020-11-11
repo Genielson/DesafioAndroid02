@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".CadastrarUserActivity"></activity>
-        <activity android:name=".CadastrarActivity" />
+
         <activity
             android:name=".SplashScreen"
             android:theme="@style/AppThemeSplash">
@@ -20,6 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".MainActivity" />
     </application>
 
