@@ -16,6 +16,8 @@ class CadastrarUserActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cadastrar_user)
 
+        setupBackButton()
+
         buttonRegisterUser = findViewById(R.id.btnSignup)
 
         buttonRegisterUser.setOnClickListener {
@@ -24,6 +26,16 @@ class CadastrarUserActivity : AppCompatActivity() {
 
             }
 
+        }
+
+    }
+
+    fun setupBackButton(){
+
+        val actionBar = supportActionBar
+
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true)
         }
 
     }
