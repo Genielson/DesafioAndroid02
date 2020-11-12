@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- A CardView that contains a TextView -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:backgroundTint="@color/colorWhite"
+                >
+
+                <ImageView
+
+                android:id="@+id/imgItemRestaurante"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/primeiro_item"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlackTitle"
+                android:layout_marginTop="24dp"
+                android:layout_marginLeft="24dp"
+                android:text="Tony Roma's"
+                android:textStyle="bold"
+                android:textSize="36sp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/colorGray"
+                android:text="Av. Lavandisca, 717 - Indianópolis, São Paulo"
+                android:textSize="15dp"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/colorGray"
+                android:text="Fecha às 22:00"
+                android:textSize="15dp"
+                />
+
+            </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -20,13 +20,7 @@ class CadastrarUserActivity : AppCompatActivity() {
 
         buttonRegisterUser = findViewById(R.id.btnSignup)
 
-        buttonRegisterUser.setOnClickListener {
-
-            if(validaCamposCadastro()){
-
-            }
-
-        }
+        clicaBotaoRegistrar()
 
     }
 
@@ -74,6 +68,17 @@ class CadastrarUserActivity : AppCompatActivity() {
         }
 
         return camposForamValidados
+    }
+
+    fun clicaBotaoRegistrar(){
+
+        buttonRegisterUser.setOnClickListener {
+
+            if(validaCamposCadastro()){
+
+            }
+
+        }
 
     }
 
