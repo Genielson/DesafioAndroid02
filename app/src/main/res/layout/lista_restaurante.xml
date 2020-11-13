@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="20dp"
+    android:layout_marginTop="10dp"
     android:layout_margin="10dp"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -18,15 +19,16 @@
 
                 <ImageView
 
-                android:id="@+id/imgItemRestaurante"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:src="@drawable/primeiro_item"
+                    android:id="@+id/imgItemRestaurante"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/primeiro_item"
 
-                />
+                    />
 
-            <TextView
+                <TextView
+                android:id="@+id/txtTituloRestaurante"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorBlackTitle"
@@ -38,6 +40,7 @@
                 />
 
             <TextView
+                android:id="@+id/txtEnderecoRestaurante"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="24dp"
@@ -49,6 +52,7 @@
                 />
 
             <TextView
+                android:id="@+id/txtHorarioRestaurante"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="24dp"

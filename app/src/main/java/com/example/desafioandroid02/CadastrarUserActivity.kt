@@ -1,5 +1,6 @@
 package com.example.desafioandroid02
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -16,9 +17,9 @@ class CadastrarUserActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cadastrar_user)
 
-        setupBackButton()
-
         buttonRegisterUser = findViewById(R.id.btnSignup)
+
+        setupBackButton()
 
         clicaBotaoRegistrar()
 
@@ -32,6 +33,11 @@ class CadastrarUserActivity : AppCompatActivity() {
             actionBar.setDisplayHomeAsUpEnabled(true)
         }
 
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
     fun validaCamposCadastro():Boolean{
@@ -60,7 +66,7 @@ class CadastrarUserActivity : AppCompatActivity() {
 
             }
 
-            textFieldEmailSignupContent.text != textFieldPasswordRepeatSignupContent.text -> {
+            textFieldPasswordSignupContent.text.toString() != textFieldPasswordRepeatSignupContent.text.toString() -> {
                 Toast.makeText(this,"As senhas não são iguais",Toast.LENGTH_SHORT).show()
                 camposForamValidados = false
             }
@@ -75,6 +81,10 @@ class CadastrarUserActivity : AppCompatActivity() {
         buttonRegisterUser.setOnClickListener {
 
             if(validaCamposCadastro()){
+
+                var intent = Intent(this,HomeActvity::class.java)
+
+                startActivity(intent)
 
             }
 

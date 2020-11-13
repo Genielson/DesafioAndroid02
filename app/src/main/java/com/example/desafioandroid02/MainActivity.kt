@@ -24,6 +24,10 @@ class MainActivity : AppCompatActivity() {
 
             if(validaCamposLogin()){
 
+                var intent = Intent(this,HomeActvity::class.java)
+
+                startActivity(intent)
+
             }
 
         }
