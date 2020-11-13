@@ -1,4 +1,4 @@
-package com.example.desafioandroid02
+package com.example.desafioandroid02.model
 
 import android.widget.ImageView
 

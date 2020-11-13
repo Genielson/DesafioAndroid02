@@ -1,4 +1,4 @@
-package com.example.desafioandroid02
+package com.example.desafioandroid02.view.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,8 +6,10 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.desafioandroid02.R
+import com.example.desafioandroid02.model.Prato
 
-class RestauranteAdapter(val listaPrato: List<Prato>,private val listener  : (Prato) -> Unit) : RecyclerView.Adapter<RestauranteAdapter.MeuViewHolder>() {
+class RestauranteAdapter(val listaPrato: List<Prato>, private val listener  : (Prato) -> Unit) : RecyclerView.Adapter<RestauranteAdapter.MeuViewHolder>() {
 
     class MeuViewHolder(view: View):RecyclerView.ViewHolder(view){
 
@@ -34,7 +36,9 @@ class RestauranteAdapter(val listaPrato: List<Prato>,private val listener  : (Pr
 
         var view = LayoutInflater.from(parent.context).inflate(R.layout.lista_pratos,parent,false)
 
-        return RestauranteAdapter.MeuViewHolder(view)
+        return MeuViewHolder(
+            view
+        )
 
     }
 

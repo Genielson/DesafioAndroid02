@@ -1,12 +1,12 @@
-package com.example.desafioandroid02
+package com.example.desafioandroid02.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import com.example.desafioandroid02.R
 import kotlinx.android.synthetic.main.activity_cadastrar_user.*
-import kotlinx.android.synthetic.main.activity_main.*
 
 
 class CadastrarUserActivity : AppCompatActivity() {
@@ -25,7 +25,7 @@ class CadastrarUserActivity : AppCompatActivity() {
 
     }
 
-    fun setupBackButton(){
+    fun setupBackButton() {
 
         val actionBar = supportActionBar
 
@@ -82,7 +82,8 @@ class CadastrarUserActivity : AppCompatActivity() {
 
             if(validaCamposCadastro()){
 
-                var intent = Intent(this,HomeActvity::class.java)
+                var intent = Intent(this,
+                    HomeActvity::class.java)
 
                 startActivity(intent)
 

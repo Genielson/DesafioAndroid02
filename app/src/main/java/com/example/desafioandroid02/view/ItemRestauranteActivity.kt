@@ -1,10 +1,10 @@
-package com.example.desafioandroid02
+package com.example.desafioandroid02.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
-import kotlinx.android.synthetic.main.activity_restaurante.*
+import com.example.desafioandroid02.R
 
 class ItemRestauranteActivity : AppCompatActivity() {
 

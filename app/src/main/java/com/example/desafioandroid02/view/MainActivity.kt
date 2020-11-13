@@ -1,9 +1,10 @@
-package com.example.desafioandroid02
+package com.example.desafioandroid02.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.example.desafioandroid02.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -42,7 +43,7 @@ class MainActivity : AppCompatActivity() {
 
     fun chamarTelaHome(){
 
-        var intent = Intent(this,HomeActvity::class.java)
+        var intent = Intent(this, HomeActvity::class.java)
 
         startActivity(intent)
 

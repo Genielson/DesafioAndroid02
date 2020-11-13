@@ -9,18 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ItemRestauranteActivity" android:theme="@style/AppThemeNoActionBar"></activity>
+        <activity android:name=".view.ItemRestauranteActivity" android:theme="@style/AppThemeNoActionBar"></activity>
 
-        <activity android:name=".RestauranteActivity" android:theme="@style/AppThemeNoActionBar" />
+        <activity android:name=".view.RestauranteActivity" android:theme="@style/AppThemeNoActionBar" />
 
         <activity
-            android:name=".HomeActvity"
+            android:name=".view.HomeActvity"
             android:label="@string/app_name" />
         <activity
-            android:name=".CadastrarUserActivity"
+            android:name=".view.CadastrarUserActivity"
             android:label="Register" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".view.splashscreen.SplashScreen"
             android:theme="@style/AppThemeSplash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,7 +28,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".view.MainActivity" />
     </application>
 
 </manifest>
