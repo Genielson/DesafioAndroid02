@@ -4,6 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/contentLayout"
+    android:background="@color/colorWhite"
     tools:context=".ItemRestauranteActivity">
+
+
+    <ImageView
+        android:id="@+id/imgItemRestaurante"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="TODO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/primeiro_item" />
+
+
+    <TextView
+        android:id="@+id/txtNomeItemRestaurante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:text="@string/salada_com_molho_gengibre"
+        android:textColor="@color/colorWhite"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgItemRestaurante"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+                android:id="@+id/txtItemDescricao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgItemRestaurante"
+                android:text="Pratos Principais"
+                android:layout_marginLeft="19dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/colorGray"
+                />
+
+    <ImageView
+        android:id="@+id/backButtonId"
+        android:layout_width="46dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/abc_vector_test" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

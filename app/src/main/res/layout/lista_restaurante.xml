@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="20dp"
@@ -10,7 +11,7 @@
 
     <!-- A CardView that contains a TextView -->
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -25,44 +26,64 @@
                     android:adjustViewBounds="true"
                     android:src="@drawable/primeiro_item"
 
-                    />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                android:id="@+id/txtTituloRestaurante"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorBlackTitle"
-                android:layout_marginTop="24dp"
-                android:layout_marginLeft="24dp"
-                android:text="Tony Roma's"
-                android:textStyle="bold"
-                android:textSize="36sp"
-                />
+                    android:id="@+id/txtTituloRestaurante"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tony Roma's"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
 
-            <TextView
-                android:id="@+id/txtEnderecoRestaurante"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginTop="5dp"
-                android:textColor="@color/colorGray"
-                android:text="Av. Lavandisca, 717 - Indianópolis, São Paulo"
-                android:textSize="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.69" />
 
-                />
+                <TextView
+                    android:id="@+id/txtEnderecoRestaurante"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Av. Lavandisca, 717 - Indianópolis, São Paulo"
+                    android:textColor="@color/colorGray"
 
-            <TextView
-                android:id="@+id/txtHorarioRestaurante"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:padding="10dp"
-                android:layout_marginTop="5dp"
-                android:textColor="@color/colorGray"
-                android:text="Fecha às 22:00"
-                android:textSize="15dp"
-                />
+                    android:textSize="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imgItemRestaurante" />
 
-            </LinearLayout>
+                <TextView
+                    android:id="@+id/txtHorarioRestaurante"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:padding="10dp"
+                    android:text="Fecha às 22:00"
+                    android:textColor="@color/colorGray"
+                    android:textSize="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtEnderecoRestaurante" />
+
+                <ImageView
+                    android:id="@+id/imageButtonBackId"
+                    android:layout_width="46dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/abc_vector_test" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

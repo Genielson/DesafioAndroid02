@@ -20,23 +20,31 @@ class MainActivity : AppCompatActivity() {
 
         buttonLogin = findViewById<Button>(R.id.btnLogin)
 
+        fazerLogin()
+
+        fazerRegistro()
+
+    }
+
+    fun fazerLogin(){
+
         buttonLogin.setOnClickListener {
 
             if(validaCamposLogin()){
 
-                var intent = Intent(this,HomeActvity::class.java)
-
-                startActivity(intent)
+                chamarTelaHome()
 
             }
 
         }
 
-        btnRegister.setOnClickListener {
+    }
 
-            chamarTelaRegister()
+    fun chamarTelaHome(){
 
-        }
+        var intent = Intent(this,HomeActvity::class.java)
+
+        startActivity(intent)
 
     }
 
@@ -64,11 +72,15 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun chamarTelaRegister(){
+    fun fazerRegistro(){
 
-        var intent = Intent(this,CadastrarUserActivity::class.java)
+        btnRegister.setOnClickListener {
 
-        startActivity(intent)
+            var intent = Intent(this, CadastrarUserActivity::class.java)
+
+            startActivity(intent)
+
+        }
     }
 
 

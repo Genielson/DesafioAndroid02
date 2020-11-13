@@ -16,12 +16,13 @@ import org.w3c.dom.Text
 class RestauranteActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
-
-    //private lateinit var tituloRestaurante : TextView
+    private lateinit var buttonBack: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_restaurante)
+
+        setupBackButton()
 
         setupInfosRestaurante()
 
@@ -67,10 +68,12 @@ class RestauranteActivity : AppCompatActivity() {
 
             val intent = Intent(this,ItemRestauranteActivity::class.java)
 
-            intent.putExtra("ITEM_RESTAURANTE",it.descricaoDoPrato)
+            intent.putExtra("TITULO_ITEM_RESTAURANTE",it.titulo)
+            intent.putExtra("DESCRICAO_ITEM_RESTAURANTE",it.descricaoDoPrato)
             intent.putExtra("IMAGEM_RESTAURANTE",it.imagemPrato)
 
             startActivity(intent)
+
         }
 
     }
@@ -88,5 +91,18 @@ class RestauranteActivity : AppCompatActivity() {
         imagemRestaurante.setImageResource(imagem)
 
     }
+
+    fun setupBackButton(){
+
+        buttonBack = findViewById(R.id.imageButtonBackId)
+
+        buttonBack.setOnClickListener {
+
+            finish()
+
+        }
+
+    }
+
 
 }
