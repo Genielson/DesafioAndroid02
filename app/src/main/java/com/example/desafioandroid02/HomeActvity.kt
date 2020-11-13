@@ -1,5 +1,6 @@
 package com.example.desafioandroid02
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -50,6 +51,10 @@ class HomeActvity : AppCompatActivity() {
                 listOf(Prato("teste","teste",R.drawable.primeiro_item)),R.drawable.quarto_item)
 
             )){
+
+            var intent = Intent(this,RestauranteActivity::class.java)
+
+            startActivity(intent)
 
         }
 
