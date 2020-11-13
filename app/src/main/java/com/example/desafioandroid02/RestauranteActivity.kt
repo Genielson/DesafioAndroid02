@@ -5,13 +5,19 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.activity_restaurante.*
+import kotlinx.android.synthetic.main.lista_restaurante.*
+import org.w3c.dom.Text
 
 class RestauranteActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
+
+    //private lateinit var tituloRestaurante : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,15 +25,13 @@ class RestauranteActivity : AppCompatActivity() {
 
         setupInfosRestaurante()
 
-        recyclerView = findViewById<RecyclerView>(R.id.recyclerViewListaPratos)
-
-        var manager = GridLayoutManager(this,2)
-
         setupRecyclerView()
 
     }
 
     fun setupRecyclerView(){
+
+        recyclerView = findViewById<RecyclerView>(R.id.recyclerViewListaPratos)
 
         var manager = GridLayoutManager(this,2)
 
@@ -39,12 +43,13 @@ class RestauranteActivity : AppCompatActivity() {
             adapter = setupAdapter()
 
         }
-
     }
 
     fun setupAdapter():RestauranteAdapter{
 
-        return RestauranteAdapter(listOf(Prato("Salada com molho Gengibre","Sed ut perspiciatis, unde omnis iste natus " +
+        return RestauranteAdapter(listOf(
+
+            Prato("Salada com molho Gengibre","Sed ut perspiciatis, unde omnis iste natus " +
                 "error sit voluptatem accusant doloremque laudantium, " +
                 "totam rem aperiam eaque ipsa, quae ab illo inventore veritatis.",R.drawable.imgprato),
 
@@ -76,15 +81,12 @@ class RestauranteActivity : AppCompatActivity() {
 
         var imagem = intent.getIntExtra("IMAGEM_RESTAURANTE",0)
 
-        var tituloRestaurante = findViewById<TextView>(R.id.txtTituloRestaurante)
-
         var imagemRestaurante = findViewById<ImageView>(R.id.imgRestaurante)
 
-        tituloRestaurante.setText(titulo)
+        txtNomeRestaurante.text = titulo.toString()
 
         imagemRestaurante.setImageResource(imagem)
 
     }
-
 
 }

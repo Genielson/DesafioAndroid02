@@ -36,7 +36,7 @@
             android:layout_marginTop="24dp"
             android:text="Tony Roma's"
             android:textStyle="bold"
-            android:textSize="36sp"
+            android:textSize="19sp"
             />
 
 

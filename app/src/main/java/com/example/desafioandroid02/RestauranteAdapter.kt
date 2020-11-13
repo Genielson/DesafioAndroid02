@@ -32,7 +32,7 @@ class RestauranteAdapter(val listaPrato: List<Prato>,private val listener  : (Pr
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MeuViewHolder {
 
 
-        var view = LayoutInflater.from(parent.context).inflate(R.layout.lista_restaurante,parent,false)
+        var view = LayoutInflater.from(parent.context).inflate(R.layout.lista_pratos,parent,false)
 
         return RestauranteAdapter.MeuViewHolder(view)
 
