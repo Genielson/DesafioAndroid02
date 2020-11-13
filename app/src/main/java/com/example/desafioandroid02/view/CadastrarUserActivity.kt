@@ -67,7 +67,7 @@ class CadastrarUserActivity : AppCompatActivity() {
             }
 
             textFieldPasswordSignupContent.text.toString() != textFieldPasswordRepeatSignupContent.text.toString() -> {
-                Toast.makeText(this,"As senhas não são iguais",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,getString(R.string.equals_password),Toast.LENGTH_SHORT).show()
                 camposForamValidados = false
             }
 
