@@ -24,8 +24,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
-            android:textColor="#3F51B5"
-            android:backgroundTint="#FFF"
+            android:textColor="@color/colorTextLoginBlue"
+            android:backgroundTint="@color/colorWhite"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -40,16 +40,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
-        android:background="#FFF"
+        android:background="@color/colorWhite"
         android:hint="@string/password">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textFieldPasswordContent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#3F51B5"
+            android:textColor="@color/colorTextLoginBlue"
             android:inputType="textPassword"
-            android:backgroundTint="#FFF"
+            android:backgroundTint="@color/colorWhite"
+            app:endIconMode="password_toggle"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -70,7 +71,7 @@
         android:layout_marginBottom="24dp"
         android:text="@string/login"
         android:padding="20dp"
-        android:backgroundTint="#FF5252"
+        android:backgroundTint="@color/colorButtonRedLoginRegister"
 
         />
 
@@ -104,7 +105,7 @@
         android:layout_marginBottom="24dp"
         android:text="@string/register"
         android:padding="20dp"
-        android:backgroundTint="#8492A6"
+        android:backgroundTint="@color/colorGray"
 
         />
 

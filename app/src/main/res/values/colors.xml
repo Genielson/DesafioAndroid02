@@ -3,8 +3,11 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="colorTextLoginBlue">#3F51B5</color>
     <color name="colorWhite">#FFF</color>
     <color name="colorGray">#8492A6</color>
     <color name="colorGrayBackground">#DDDDDD</color>
+
     <color name="colorBlackTitle">#1F2D3D</color>
+    <color name="colorButtonRedLoginRegister">#FF5252</color>
 </resources>
