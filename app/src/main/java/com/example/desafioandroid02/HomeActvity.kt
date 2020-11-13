@@ -39,20 +39,23 @@ class HomeActvity : AppCompatActivity() {
 
         return HomeAdapter(listOf(
             Restaurante("Tony Roma's", "Av. Lavandisca, 717 - Indianópolis, São Paulo", "Fecha às 22:00",
-                listOf(Prato("teste","teste",R.drawable.primeiro_item)),R.drawable.primeiro_item),
+                R.drawable.primeiro_item),
 
             Restaurante("Tony Roma's", "Av. Lavandisca, 717 - Indianópolis, São Paulo", "Fecha às 22:00",
-                listOf(Prato("teste","teste",R.drawable.primeiro_item)),R.drawable.segundo_item),
+                R.drawable.segundo_item),
 
             Restaurante("Tony Roma's", "Av. Lavandisca, 717 - Indianópolis, São Paulo", "Fecha às 22:00",
-                listOf(Prato("teste","teste",R.drawable.primeiro_item)),R.drawable.terceiro_item),
+                R.drawable.terceiro_item),
 
             Restaurante("Tony Roma's", "Av. Lavandisca, 717 - Indianópolis, São Paulo", "Fecha às 22:00",
-                listOf(Prato("teste","teste",R.drawable.primeiro_item)),R.drawable.quarto_item)
+                R.drawable.quarto_item)
 
             )){
 
             var intent = Intent(this,RestauranteActivity::class.java)
+
+            intent.putExtra("TITULO_RESTAURANTE",it.titulo)
+            intent.putExtra("IMAGEM_RESTAURANTE",it.imagemRestaurante)
 
             startActivity(intent)
 
